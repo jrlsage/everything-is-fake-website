@@ -229,7 +229,7 @@ export default {
 
       .meta-strip {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
         margin-top: 16px;
       }
@@ -479,7 +479,7 @@ export default {
               As layoffs and scandal engulf his company, a rising creator must choose between personal visibility and the truth.
             </p>
             <p class="lede">
-              A New York short film about ambition, image, and the performance of success.
+              A tech worker curates a perfect online persona while layoffs, scandal, and corporate mythmaking close in around him.
             </p>
             <div class="button-row">
               <a class="button primary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Screener%20Request">Request Screener</a>
@@ -501,10 +501,6 @@ export default {
             <span class="meta-label">Status</span>
             <span class="meta-value">In development</span>
           </div>
-          <div class="meta-item">
-            <span class="meta-label">Availability</span>
-            <span class="meta-value">Screeners by request</span>
-          </div>
         </div>
       </section>
 
@@ -517,9 +513,8 @@ export default {
           <article class="panel">
             <h3>Synopsis</h3>
             <p>
-              John has built his identity around looking indispensable. Online, he appears polished, ambitious, and in control.
-              Offline, layoffs, corruption, and corporate self-protection are closing in. As the company he serves grows more unstable,
-              he must decide whether visibility is actually power or just another trap.
+              John wants to become the face of the company. Online, he looks polished, ambitious, and in control. Offline, layoffs,
+              whistleblower fallout, and corporate self-protection are closing in. The more he chases visibility, the less of himself he owns.
             </p>
           </article>
 
@@ -550,9 +545,7 @@ export default {
       <section class="section" id="gallery">
         <div class="section-head">
           <h2>On set</h2>
-          <p>
-            Until the poster and final stills are locked, a small set of controlled production images does the work.
-          </p>
+          <p>Production images until final stills and key art are locked.</p>
         </div>
         <div class="gallery">
           <figure>
@@ -600,9 +593,8 @@ export default {
           <article class="panel">
             <h3>Adam Thomas</h3>
             <p>
-              Adam Thomas is a New York-based writer-director whose work centers identity, labor, social performance, and the pressure
-              institutions place on personal behavior. Selected directing credits include <em>Beelzepup</em> (2025),
-              <em>Borders</em> (2024), and <em>The Great American Hangover</em> (2023).
+              Adam Thomas is a New York-based writer-director whose work centers identity, labor, and social performance.
+              Selected directing credits include <em>Beelzepup</em> (2025), <em>Borders</em> (2024), and <em>The Great American Hangover</em> (2023).
             </p>
             <div class="quote">
               A short film about the pressure to stay visible inside a system that never intended to let you own anything.
@@ -614,27 +606,17 @@ export default {
       <section class="section" id="press">
         <div class="section-head">
           <h2>Press and awards</h2>
-          <p>Public intrigue up front. Supporting materials on request.</p>
+          <p>Screeners and supporting materials are available by request.</p>
         </div>
-        <div class="support-grid">
-          <article class="panel">
-            <h3>Available now</h3>
-            <ul class="list">
-              <li>Official logline and synopsis</li>
-              <li>Director bio and project overview</li>
-              <li>Selected on-set imagery</li>
-              <li>Direct screener and inquiry path</li>
-            </ul>
-          </article>
-          <article class="panel">
-            <h3>In progress</h3>
-            <ul class="list">
-              <li>Poster art and final stills</li>
-              <li>Formal director statement</li>
-              <li>Downloadable press kit PDF</li>
-              <li>Festival selections and awards updates</li>
-            </ul>
-          </article>
+        <div class="panel">
+          <p>
+            For festivals, awards consideration, and press, the film can provide logline and synopsis materials, director information,
+            selected production images, and screener access as appropriate.
+          </p>
+          <div class="button-row">
+            <a class="button primary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Press%20Kit%20Request">Request Press Kit</a>
+            <a class="button secondary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Screener%20Request">Request Screener</a>
+          </div>
         </div>
       </section>
 
