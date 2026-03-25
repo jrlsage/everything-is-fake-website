@@ -45,7 +45,7 @@ export default {
           radial-gradient(circle at top, rgba(182, 89, 44, 0.18), transparent 34%),
           linear-gradient(180deg, #181316 0%, #131012 52%, #0d0a0b 100%);
         font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-        line-height: 1.55;
+        line-height: 1.48;
       }
 
       body::before {
@@ -149,7 +149,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 28px;
+        padding: 26px;
         border-radius: 30px;
         border: 1px solid var(--line);
         background: var(--panel);
@@ -186,15 +186,15 @@ export default {
       }
 
       .logline {
-        margin-top: 18px;
+        margin-top: 16px;
         font-size: clamp(1.2rem, 2.8vw, 1.6rem);
         color: #fff9f2;
-        max-width: 25ch;
+        max-width: 23ch;
       }
 
       .lede {
-        margin-top: 18px;
-        max-width: 58ch;
+        margin-top: 14px;
+        max-width: 46ch;
         color: var(--muted);
       }
 
@@ -256,7 +256,7 @@ export default {
       }
 
       .section {
-        padding: 24px 0;
+        padding: 20px 0;
       }
 
       .section-head {
@@ -269,12 +269,12 @@ export default {
       }
 
       .section-head p {
-        max-width: 58ch;
+        max-width: 50ch;
         color: var(--muted);
       }
 
       .panel {
-        padding: 24px;
+        padding: 22px;
         border-radius: 26px;
         border: 1px solid var(--line);
         background: var(--panel);
@@ -374,14 +374,14 @@ export default {
       }
 
       .quote {
-        margin-top: 16px;
-        padding: 18px;
+        margin-top: 14px;
+        padding: 16px;
         border-radius: 20px;
         background: rgba(242, 174, 99, 0.09);
         border: 1px solid rgba(242, 174, 99, 0.2);
         font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
-        font-size: 1.18rem;
-        line-height: 1.4;
+        font-size: 1.12rem;
+        line-height: 1.34;
       }
 
       .footer {
@@ -479,7 +479,7 @@ export default {
               As layoffs and scandal engulf his company, a rising creator must choose between personal visibility and the truth.
             </p>
             <p class="lede">
-              A New York-set short film about ambition, image, and the performance of success inside a collapsing tech machine.
+              A New York short film about ambition, image, and the performance of success.
             </p>
             <div class="button-row">
               <a class="button primary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Screener%20Request">Request Screener</a>
@@ -511,10 +511,7 @@ export default {
       <section class="section" id="film">
         <div class="section-head">
           <h2>About the film</h2>
-          <p>
-            The public-facing job of this page is simple: make the film feel real, make the premise feel sharp, and make it easy for
-            programmers, juries, and press to act on interest.
-          </p>
+          <p>A satirical drama about aspiration, branding, and corporate decay.</p>
         </div>
         <div class="about-grid">
           <article class="panel">
@@ -523,10 +520,6 @@ export default {
               John has built his identity around looking indispensable. Online, he appears polished, ambitious, and in control.
               Offline, layoffs, corruption, and corporate self-protection are closing in. As the company he serves grows more unstable,
               he must decide whether visibility is actually power or just another trap.
-            </p>
-            <p>
-              <em>Everything Is Fake</em> uses the split between curated social video and lived reality to examine image, labor, and the
-              cost of trying to stay visible inside a system designed to own the story.
             </p>
           </article>
 
@@ -558,8 +551,7 @@ export default {
         <div class="section-head">
           <h2>On set</h2>
           <p>
-            Independent film sites that work tend to show a small number of confident images instead of burying visitors in copy. Until
-            the official poster and stills are locked, controlled production images do that job.
+            Until the poster and final stills are locked, a small set of controlled production images does the work.
           </p>
         </div>
         <div class="gallery">
@@ -593,10 +585,7 @@ export default {
       <section class="section" id="director">
         <div class="section-head">
           <h2>Writer-director</h2>
-          <p>
-            A strong film site needs authorship on the page. This is where the project stops reading like a placeholder and starts
-            reading like a real piece of cinema.
-          </p>
+          <p>Filmmaker context, kept tight.</p>
         </div>
         <div class="director-grid">
           <figure class="headshot-card">
@@ -615,10 +604,6 @@ export default {
               institutions place on personal behavior. Selected directing credits include <em>Beelzepup</em> (2025),
               <em>Borders</em> (2024), and <em>The Great American Hangover</em> (2023).
             </p>
-            <p>
-              <em>Everything Is Fake</em> extends those concerns into the modern workplace, where aspiration, personal branding, and
-              corporate self-preservation become indistinguishable from one another.
-            </p>
             <div class="quote">
               A short film about the pressure to stay visible inside a system that never intended to let you own anything.
             </div>
@@ -629,17 +614,15 @@ export default {
       <section class="section" id="press">
         <div class="section-head">
           <h2>Press and awards</h2>
-          <p>
-            The public site should create interest. The supporting materials should make professional follow-up easy.
-          </p>
+          <p>Public intrigue up front. Supporting materials on request.</p>
         </div>
         <div class="support-grid">
           <article class="panel">
             <h3>Available now</h3>
             <ul class="list">
               <li>Official logline and synopsis</li>
-              <li>Project overview and filmmaker bio</li>
-              <li>On-set imagery for current publicity use</li>
+              <li>Director bio and project overview</li>
+              <li>Selected on-set imagery</li>
               <li>Direct screener and inquiry path</li>
             </ul>
           </article>
@@ -658,7 +641,7 @@ export default {
       <section class="section" id="contact">
         <div class="section-head">
           <h2>Contact</h2>
-          <p>Festival programming, awards consideration, screener requests, and press inquiries.</p>
+          <p>Festival programming, screener requests, and press inquiries.</p>
         </div>
         <div class="panel">
           <p><strong>Email:</strong> <a href="mailto:adam@directedbyadam.com">adam@directedbyadam.com</a></p>
