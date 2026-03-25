@@ -8,27 +8,26 @@ export default {
     <title>Everything Is Fake | Official Film Site</title>
     <meta
       name="description"
-      content="Official site for Everything Is Fake, a short film about ambition, image, and the cost of staying visible inside a collapsing tech machine."
+      content="Official site for Everything Is Fake, a short film about ambition, image, and the cost of staying visible as a company collapses around its people."
     />
     <meta property="og:title" content="Everything Is Fake | Official Film Site" />
     <meta
       property="og:description"
-      content="A short film about ambition, image, and the cost of staying visible inside a collapsing tech machine."
+      content="A short film about ambition, image, and the cost of staying visible as a company collapses around its people."
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#120f11" />
+    <meta name="theme-color" content="#131012" />
     <style>
       :root {
-        --bg: #120f11;
-        --bg-soft: #1b1519;
-        --panel: rgba(27, 21, 25, 0.92);
-        --panel-strong: rgba(37, 28, 34, 0.96);
-        --ink: #f4eadf;
-        --muted: #d1c2b3;
-        --accent: #efab5b;
-        --accent-soft: rgba(239, 171, 91, 0.18);
-        --line: rgba(244, 234, 223, 0.14);
-        --shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+        --bg: #131012;
+        --bg-soft: #1c171a;
+        --panel: rgba(28, 23, 26, 0.92);
+        --panel-strong: rgba(35, 28, 32, 0.98);
+        --line: rgba(249, 238, 227, 0.12);
+        --text: #f9eee3;
+        --muted: #d8c4b2;
+        --accent: #f2ae63;
+        --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
       }
 
       * {
@@ -41,10 +40,10 @@ export default {
 
       body {
         margin: 0;
-        color: var(--ink);
+        color: var(--text);
         background:
-          radial-gradient(circle at top, rgba(174, 59, 42, 0.18), transparent 32%),
-          linear-gradient(180deg, #171215 0%, #120f11 55%, #0b090a 100%);
+          radial-gradient(circle at top, rgba(182, 89, 44, 0.18), transparent 34%),
+          linear-gradient(180deg, #181316 0%, #131012 52%, #0d0a0b 100%);
         font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
         line-height: 1.55;
       }
@@ -54,7 +53,7 @@ export default {
         position: fixed;
         inset: 0;
         pointer-events: none;
-        opacity: 0.3;
+        opacity: 0.22;
         background:
           linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03)) 0 0 / 100% 1px,
           linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)) 0 0 / 1px 100%;
@@ -65,8 +64,13 @@ export default {
         color: inherit;
       }
 
+      img {
+        display: block;
+        width: 100%;
+      }
+
       .wrap {
-        width: min(1120px, calc(100vw - 32px));
+        width: min(1160px, calc(100vw - 32px));
         margin: 0 auto;
       }
 
@@ -74,9 +78,9 @@ export default {
         position: sticky;
         top: 0;
         z-index: 10;
-        backdrop-filter: blur(16px);
-        background: rgba(18, 15, 17, 0.78);
         border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+        background: rgba(19, 16, 18, 0.8);
       }
 
       .topbar-inner {
@@ -90,17 +94,16 @@ export default {
       .brand {
         font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
         font-size: 1rem;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
       }
 
       .nav {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
         gap: 14px;
-        font-size: 0.92rem;
         color: var(--muted);
+        font-size: 0.92rem;
       }
 
       .nav a {
@@ -108,28 +111,64 @@ export default {
       }
 
       .hero {
-        padding: 68px 0 38px;
+        padding: 44px 0 26px;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
-        gap: 28px;
+        grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+        gap: 22px;
         align-items: stretch;
+      }
+
+      .hero-image {
+        position: relative;
+        min-height: 560px;
+        overflow: hidden;
+        border-radius: 30px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        background: #0d0a0b;
+      }
+
+      .hero-image img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.55)),
+          linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+      }
+
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 28px;
+        border-radius: 30px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        box-shadow: var(--shadow);
       }
 
       .eyebrow {
         display: inline-flex;
+        width: fit-content;
         align-items: center;
         gap: 10px;
+        margin-bottom: 16px;
         padding: 8px 12px;
-        border: 1px solid var(--line);
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
         color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
         text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.78rem;
       }
 
       h1,
@@ -141,24 +180,22 @@ export default {
       }
 
       h1 {
-        margin-top: 16px;
-        font-size: clamp(3rem, 8vw, 6rem);
-        line-height: 0.96;
-        max-width: 10ch;
+        font-size: clamp(3.2rem, 7vw, 5.9rem);
+        line-height: 0.94;
+        max-width: 7ch;
       }
 
-      .subhead {
-        margin-top: 20px;
-        max-width: 28ch;
-        font-size: clamp(1.22rem, 2.8vw, 1.65rem);
-        color: #fbf5ee;
-      }
-
-      .lead {
+      .logline {
         margin-top: 18px;
-        max-width: 62ch;
+        font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+        color: #fff9f2;
+        max-width: 25ch;
+      }
+
+      .lede {
+        margin-top: 18px;
+        max-width: 58ch;
         color: var(--muted);
-        font-size: 1.04rem;
       }
 
       .button-row {
@@ -182,7 +219,7 @@ export default {
 
       .button.primary {
         background: var(--accent);
-        color: #171215;
+        color: #201713;
       }
 
       .button.secondary {
@@ -190,95 +227,40 @@ export default {
         background: rgba(255, 255, 255, 0.03);
       }
 
-      .poster-card,
-      .panel,
-      .callout {
-        border: 1px solid var(--line);
-        background: var(--panel);
-        box-shadow: var(--shadow);
-      }
-
-      .poster-card {
-        position: relative;
-        overflow: hidden;
-        min-height: 520px;
-        padding: 24px;
-        border-radius: 28px;
-        background:
-          linear-gradient(180deg, rgba(239, 171, 91, 0.08), transparent 35%),
-          radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.16), transparent 28%),
-          linear-gradient(160deg, #24191d 0%, #171215 100%);
-      }
-
-      .poster-card::after {
-        content: "";
-        position: absolute;
-        inset: 18px;
-        border: 1px solid rgba(244, 234, 223, 0.09);
-        border-radius: 22px;
-      }
-
-      .poster-inner {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 22px;
-      }
-
-      .poster-kicker {
-        color: var(--muted);
-        font-size: 0.83rem;
-        text-transform: uppercase;
-        letter-spacing: 0.18em;
-      }
-
-      .poster-title {
-        font-size: clamp(2.2rem, 5vw, 4rem);
-        line-height: 0.92;
-        max-width: 7ch;
-      }
-
-      .poster-copy {
-        max-width: 28ch;
-        color: var(--muted);
-      }
-
-      .poster-stats {
+      .meta-strip {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 16px;
       }
 
-      .stat {
-        padding: 12px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(244, 234, 223, 0.08);
+      .meta-item {
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
       }
 
-      .stat-label {
+      .meta-label {
         display: block;
         color: var(--muted);
-        font-size: 0.74rem;
+        font-size: 0.76rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
 
-      .stat-value {
+      .meta-value {
         display: block;
         margin-top: 4px;
         font-size: 1rem;
       }
 
       .section {
-        padding: 22px 0;
+        padding: 24px 0;
       }
 
       .section-head {
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
 
       .section-head h2 {
@@ -287,167 +269,165 @@ export default {
       }
 
       .section-head p {
-        max-width: 60ch;
+        max-width: 58ch;
         color: var(--muted);
       }
 
       .panel {
-        border-radius: 24px;
         padding: 24px;
+        border-radius: 26px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        box-shadow: var(--shadow);
       }
 
-      .story-grid,
-      .theme-grid,
-      .support-grid,
-      .credits-grid {
+      .about-grid,
+      .director-grid,
+      .support-grid {
         display: grid;
         gap: 18px;
       }
 
-      .story-grid {
-        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      .about-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
       }
 
-      .theme-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      .director-grid {
+        grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
       }
 
-      .support-grid,
-      .credits-grid {
+      .support-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .theme-card,
-      .support-card,
-      .credit-card {
-        padding: 20px;
-        border-radius: 20px;
-        border: 1px solid var(--line);
-        background: var(--panel-strong);
-      }
-
-      .theme-card h3,
-      .support-card h3,
-      .credit-card h3 {
-        margin-bottom: 10px;
-        font-size: 1.35rem;
-      }
-
-      .theme-card p,
-      .support-card p,
-      .credit-card p,
-      .story-grid p,
-      .callout p {
-        color: var(--muted);
-      }
-
-      .detail-list {
+      .stat-list {
         display: grid;
         gap: 14px;
       }
 
-      .detail-row {
+      .stat-row {
         display: flex;
         justify-content: space-between;
-        gap: 12px;
+        gap: 14px;
         padding-bottom: 12px;
         border-bottom: 1px solid var(--line);
       }
 
-      .detail-row:last-child {
+      .stat-row:last-child {
         padding-bottom: 0;
         border-bottom: 0;
       }
 
-      .detail-label {
+      .stat-row strong {
         color: var(--muted);
         text-transform: uppercase;
         letter-spacing: 0.06em;
         font-size: 0.8rem;
+        font-weight: 600;
       }
 
-      .detail-value {
+      .stat-row span:last-child {
         text-align: right;
       }
 
-      .quote {
-        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
-        font-size: 1.45rem;
-        line-height: 1.3;
-        color: #fbf5ee;
+      .gallery {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 14px;
       }
 
-      .callout {
-        margin-top: 18px;
-        border-radius: 24px;
-        padding: 24px;
-        background:
-          linear-gradient(135deg, rgba(239, 171, 91, 0.1), rgba(255, 255, 255, 0.02)),
-          var(--panel);
-      }
-
-      .press-list {
+      .gallery figure,
+      .headshot-card {
         margin: 0;
-        padding-left: 18px;
+        overflow: hidden;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: var(--panel-strong);
+        box-shadow: var(--shadow);
       }
 
-      .press-list li {
-        margin-bottom: 10px;
-        color: var(--muted);
+      .gallery figure img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
       }
 
-      .footer {
-        padding: 18px 0 44px;
+      .gallery figcaption,
+      .headshot-caption {
+        padding: 12px 14px 14px;
         color: var(--muted);
         font-size: 0.92rem;
       }
 
-      .footer a {
-        text-decoration: none;
+      .headshot-card img {
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
       }
 
-      @media (max-width: 920px) {
+      .list {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .list li {
+        margin-bottom: 10px;
+        color: var(--muted);
+      }
+
+      .quote {
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 20px;
+        background: rgba(242, 174, 99, 0.09);
+        border: 1px solid rgba(242, 174, 99, 0.2);
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+        font-size: 1.18rem;
+        line-height: 1.4;
+      }
+
+      .footer {
+        padding: 8px 0 46px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 980px) {
         .hero-grid,
-        .story-grid,
-        .theme-grid,
+        .about-grid,
+        .director-grid,
+        .gallery,
         .support-grid,
-        .credits-grid {
+        .meta-strip {
           grid-template-columns: 1fr;
         }
 
-        .poster-card {
+        .hero-image {
           min-height: 420px;
         }
       }
 
       @media (max-width: 640px) {
         .topbar-inner {
-          align-items: flex-start;
           flex-direction: column;
-        }
-
-        .nav {
-          justify-content: flex-start;
+          align-items: flex-start;
         }
 
         .hero {
-          padding-top: 44px;
+          padding-top: 28px;
         }
 
+        .hero-copy,
+        .hero-image,
         .panel,
-        .theme-card,
-        .support-card,
-        .credit-card,
-        .callout,
-        .poster-card {
-          border-radius: 20px;
+        .gallery figure,
+        .headshot-card {
+          border-radius: 22px;
         }
 
-        .detail-row {
+        .stat-row {
           flex-direction: column;
         }
 
-        .detail-value {
+        .stat-row span:last-child {
           text-align: left;
         }
       }
@@ -457,7 +437,7 @@ export default {
         "@context": "https://schema.org",
         "@type": "Movie",
         "name": "Everything Is Fake",
-        "description": "A short film about ambition, image, and the cost of staying visible inside a collapsing tech machine.",
+        "description": "A short film about ambition, image, and the cost of staying visible as a company collapses around its people.",
         "genre": ["Drama", "Satire"],
         "inLanguage": "en",
         "countryOfOrigin": "US",
@@ -474,8 +454,9 @@ export default {
         <div class="brand">Everything Is Fake</div>
         <nav class="nav" aria-label="Primary">
           <a href="#film">Film</a>
+          <a href="#gallery">On Set</a>
           <a href="#director">Director</a>
-          <a href="#awards">Awards + Press</a>
+          <a href="#press">Press</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -484,136 +465,128 @@ export default {
     <main class="wrap">
       <section class="hero">
         <div class="hero-grid">
-          <div>
+          <div class="hero-image">
+            <img
+              src="/images/hero-on-set.jpg"
+              alt="Behind-the-scenes image from Everything Is Fake showing a scene at a table during production."
+            />
+          </div>
+
+          <div class="hero-copy">
             <span class="eyebrow">Official site for the short film</span>
             <h1>Everything Is Fake</h1>
-            <p class="subhead">
+            <p class="logline">
               As layoffs and scandal engulf his company, a rising creator must choose between personal visibility and the truth.
             </p>
-            <p class="lead">
-              Set inside a collapsing tech machine, <em>Everything Is Fake</em> is a short film about image, labor, ambition,
-              and the performance of success. It is built to intrigue an audience and orient festivals, juries, and press immediately.
+            <p class="lede">
+              A New York-set short film about ambition, image, and the performance of success inside a collapsing tech machine.
             </p>
             <div class="button-row">
               <a class="button primary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Screener%20Request">Request Screener</a>
-              <a class="button secondary" href="#awards">Awards + Press Info</a>
+              <a class="button secondary" href="#press">Press + Awards</a>
             </div>
           </div>
+        </div>
 
-          <aside class="poster-card" aria-label="Film overview">
-            <div class="poster-inner">
-              <div>
-                <div class="poster-kicker">Drama / Satire / Short Film</div>
-                <h2 class="poster-title">Everything Is Fake</h2>
-              </div>
-              <p class="poster-copy">
-                Social-media polish collides with real-life collapse as a worker tries to brand his way out of a system already
-                consuming him.
-              </p>
-              <div class="poster-stats">
-                <div class="stat">
-                  <span class="stat-label">Status</span>
-                  <span class="stat-value">In development</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-label">Setting</span>
-                  <span class="stat-value">New York tech world</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-label">Format</span>
-                  <span class="stat-value">Digital short</span>
-                </div>
-                <div class="stat">
-                  <span class="stat-label">Availability</span>
-                  <span class="stat-value">By request</span>
-                </div>
-              </div>
-            </div>
-          </aside>
+        <div class="meta-strip" aria-label="Film details">
+          <div class="meta-item">
+            <span class="meta-label">Format</span>
+            <span class="meta-value">Short film</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Genre</span>
+            <span class="meta-value">Drama / Satire</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Status</span>
+            <span class="meta-value">In development</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Availability</span>
+            <span class="meta-value">Screeners by request</span>
+          </div>
         </div>
       </section>
 
       <section class="section" id="film">
         <div class="section-head">
-          <h2>This is a film first</h2>
+          <h2>About the film</h2>
           <p>
-            The site now needs to behave like a film site, not a startup placeholder. That means story, mood, filmmaker voice,
-            and clean access for programmers, awards committees, and press.
+            The public-facing job of this page is simple: make the film feel real, make the premise feel sharp, and make it easy for
+            programmers, juries, and press to act on interest.
           </p>
         </div>
-        <div class="story-grid">
+        <div class="about-grid">
           <article class="panel">
             <h3>Synopsis</h3>
             <p>
-              John has built an identity around looking indispensable. Online, he appears polished, ambitious, and in control.
-              Offline, layoffs, corruption, and corporate self-protection are closing in around him. As the company he serves
-              grows more unstable, he has to decide whether visibility is actually power or just another trap.
+              John has built his identity around looking indispensable. Online, he appears polished, ambitious, and in control.
+              Offline, layoffs, corruption, and corporate self-protection are closing in. As the company he serves grows more unstable,
+              he must decide whether visibility is actually power or just another trap.
             </p>
             <p>
-              <em>Everything Is Fake</em> uses the split between curated social video and lived reality to expose how performance,
-              loyalty, and aspiration can become tools of control.
+              <em>Everything Is Fake</em> uses the split between curated social video and lived reality to examine image, labor, and the
+              cost of trying to stay visible inside a system designed to own the story.
             </p>
           </article>
 
           <aside class="panel">
-            <h3>Film Snapshot</h3>
-            <div class="detail-list">
-              <div class="detail-row">
-                <span class="detail-label">Genre</span>
-                <span class="detail-value">Drama / Satire</span>
+            <h3>Film details</h3>
+            <div class="stat-list">
+              <div class="stat-row">
+                <strong>Setting</strong>
+                <span>New York tech world</span>
               </div>
-              <div class="detail-row">
-                <span class="detail-label">Runtime</span>
-                <span class="detail-value">Short film</span>
+              <div class="stat-row">
+                <strong>Language</strong>
+                <span>English</span>
               </div>
-              <div class="detail-row">
-                <span class="detail-label">Language</span>
-                <span class="detail-value">English</span>
+              <div class="stat-row">
+                <strong>Premiere</strong>
+                <span>To be announced</span>
               </div>
-              <div class="detail-row">
-                <span class="detail-label">Country</span>
-                <span class="detail-value">United States</span>
-              </div>
-              <div class="detail-row">
-                <span class="detail-label">Premiere Status</span>
-                <span class="detail-value">To be announced</span>
-              </div>
-              <div class="detail-row">
-                <span class="detail-label">Screeners</span>
-                <span class="detail-value">Festivals and qualified press by request</span>
+              <div class="stat-row">
+                <strong>Materials</strong>
+                <span>Screeners and press materials available upon request</span>
               </div>
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="gallery">
         <div class="section-head">
-          <h2>Why people will lean in</h2>
+          <h2>On set</h2>
           <p>
-            Interest comes from tension, not administration. The page should sell the idea, the relevance, and the filmmaking
-            language before it starts listing materials.
+            Independent film sites that work tend to show a small number of confident images instead of burying visitors in copy. Until
+            the official poster and stills are locked, controlled production images do that job.
           </p>
         </div>
-        <div class="theme-grid">
-          <article class="theme-card">
-            <h3>Image vs truth</h3>
-            <p>
-              The film turns the gap between social-media performance and actual life into the engine of the story.
-            </p>
-          </article>
-          <article class="theme-card">
-            <h3>Ambition under pressure</h3>
-            <p>
-              John is not just trying to survive. He is trying to become visible in a system that rewards performance over integrity.
-            </p>
-          </article>
-          <article class="theme-card">
-            <h3>Corporate rot with style</h3>
-            <p>
-              The visual language moves from curated vertical video into increasingly unstable reality, giving the film a built-in hook.
-            </p>
-          </article>
+        <div class="gallery">
+          <figure>
+            <img
+              src="/images/gallery-conversation.jpg"
+              alt="Behind-the-scenes image from Everything Is Fake showing the director in conversation with cast."
+              loading="lazy"
+            />
+            <figcaption>Director and cast in conversation during production.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/gallery-camera.jpg"
+              alt="Behind-the-scenes image from Everything Is Fake showing camera work and production setup."
+              loading="lazy"
+            />
+            <figcaption>Camera and monitor work during setup.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/gallery-direction.jpg"
+              alt="Behind-the-scenes image from Everything Is Fake showing direction on set."
+              loading="lazy"
+            />
+            <figcaption>Direction and collaboration between takes.</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -621,93 +594,63 @@ export default {
         <div class="section-head">
           <h2>Writer-director</h2>
           <p>
-            The strongest version of this site needs filmmaker authorship on the page. That is how it stops feeling generic and starts
-            feeling specific.
+            A strong film site needs authorship on the page. This is where the project stops reading like a placeholder and starts
+            reading like a real piece of cinema.
           </p>
         </div>
-        <div class="story-grid">
+        <div class="director-grid">
+          <figure class="headshot-card">
+            <img
+              src="/images/adam-thomas-headshot.jpg"
+              alt="Portrait of writer-director Adam Thomas."
+              loading="lazy"
+            />
+            <figcaption class="headshot-caption">Adam Thomas, writer-director.</figcaption>
+          </figure>
+
           <article class="panel">
             <h3>Adam Thomas</h3>
             <p>
-              Adam Thomas is a New York-based writer-director whose work centers identity, labor, social performance, and the ways
-              institutions shape personal behavior. His selected directing credits include <em>Beelzepup</em> (2025),
+              Adam Thomas is a New York-based writer-director whose work centers identity, labor, social performance, and the pressure
+              institutions place on personal behavior. Selected directing credits include <em>Beelzepup</em> (2025),
               <em>Borders</em> (2024), and <em>The Great American Hangover</em> (2023).
             </p>
             <p>
-              <em>Everything Is Fake</em> extends that interest into the modern workplace, where aspiration, personal branding, and
-              corporate self-preservation blur into a single performance.
+              <em>Everything Is Fake</em> extends those concerns into the modern workplace, where aspiration, personal branding, and
+              corporate self-preservation become indistinguishable from one another.
             </p>
-          </article>
-
-          <aside class="callout">
             <div class="quote">
               A short film about the pressure to stay visible inside a system that never intended to let you own anything.
             </div>
-            <p>
-              The next revision should swap this with language pulled directly from the formal director statement once that text is
-              finalized.
-            </p>
-          </aside>
+          </article>
         </div>
       </section>
 
-      <section class="section" id="awards">
+      <section class="section" id="press">
         <div class="section-head">
-          <h2>Awards, festivals, and press</h2>
+          <h2>Press and awards</h2>
           <p>
-            Awards-ready does not mean pretending the film already has laurels. It means the infrastructure is clean, credible, and easy
-            for gatekeepers to use.
+            The public site should create interest. The supporting materials should make professional follow-up easy.
           </p>
         </div>
         <div class="support-grid">
-          <article class="support-card">
-            <h3>What is ready now</h3>
-            <ul class="press-list">
+          <article class="panel">
+            <h3>Available now</h3>
+            <ul class="list">
               <li>Official logline and synopsis</li>
-              <li>Clear film metadata and premiere status</li>
-              <li>Director bio and positioning</li>
-              <li>Direct screener and press contact path</li>
+              <li>Project overview and filmmaker bio</li>
+              <li>On-set imagery for current publicity use</li>
+              <li>Direct screener and inquiry path</li>
             </ul>
           </article>
-          <article class="support-card">
-            <h3>What should come next</h3>
-            <ul class="press-list">
-              <li>Poster art and 3 to 5 strong stills</li>
+          <article class="panel">
+            <h3>In progress</h3>
+            <ul class="list">
+              <li>Poster art and final stills</li>
               <li>Formal director statement</li>
               <li>Downloadable press kit PDF</li>
-              <li>Festival selections and awards updates once earned</li>
+              <li>Festival selections and awards updates</li>
             </ul>
-          </article>
-        </div>
-        <div class="callout">
-          <h3>For programmers, juries, and press</h3>
-          <p>
-            Screeners, press materials, and awards consideration information are available by request. This keeps the site public-facing
-            and intriguing while still supporting professional review.
-          </p>
-          <div class="button-row">
-            <a class="button primary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Press%20Inquiry">Press inquiry</a>
-            <a class="button secondary" href="mailto:adam@directedbyadam.com?subject=Everything%20Is%20Fake%20-%20Festival%20Request">Festival request</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>Credits and materials</h2>
-          <p>
-            Even before the final assets are live, the site should show that a professional package is forming around the film.
-          </p>
-        </div>
-        <div class="credits-grid">
-          <article class="credit-card">
-            <h3>Primary credit</h3>
-            <p><strong>Writer / Director:</strong> Adam Thomas</p>
-            <p>Additional cast and crew credits will be announced as materials are finalized.</p>
-          </article>
-          <article class="credit-card">
-            <h3>Materials in progress</h3>
-            <p>Director statement, poster, stills, press kit, screener workflow, and festival updates.</p>
           </article>
         </div>
       </section>
@@ -715,20 +658,11 @@ export default {
       <section class="section" id="contact">
         <div class="section-head">
           <h2>Contact</h2>
-          <p>
-            This should stay frictionless. If someone is interested, they should know exactly how to reach the film.
-          </p>
+          <p>Festival programming, awards consideration, screener requests, and press inquiries.</p>
         </div>
-        <div class="story-grid">
-          <article class="panel">
-            <h3>General + professional inquiries</h3>
-            <p><strong>Email:</strong> <a href="mailto:adam@directedbyadam.com">adam@directedbyadam.com</a></p>
-            <p><strong>Website:</strong> <a href="https://directedbyadam.com">directedbyadam.com</a></p>
-          </article>
-          <aside class="panel">
-            <h3>Use cases</h3>
-            <p>Festival programming, awards consideration, press requests, screeners, and professional inquiries.</p>
-          </aside>
+        <div class="panel">
+          <p><strong>Email:</strong> <a href="mailto:adam@directedbyadam.com">adam@directedbyadam.com</a></p>
+          <p><strong>Website:</strong> <a href="https://directedbyadam.com">directedbyadam.com</a></p>
         </div>
       </section>
     </main>
