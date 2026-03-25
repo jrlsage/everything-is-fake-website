@@ -562,7 +562,6 @@ export default {
               alt="Behind-the-scenes image from Everything Is Fake showing camera work and production setup."
               loading="lazy"
             />
-            <figcaption>Camera and monitor work during setup.</figcaption>
           </figure>
           <figure>
             <img
@@ -578,7 +577,6 @@ export default {
       <section class="section" id="director">
         <div class="section-head">
           <h2>Writer-director</h2>
-          <p>Filmmaker context, kept tight.</p>
         </div>
         <div class="director-grid">
           <figure class="headshot-card">
@@ -597,7 +595,7 @@ export default {
               Selected directing credits include <em>Beelzepup</em> (2025), <em>Borders</em> (2024), and <em>The Great American Hangover</em> (2023).
             </p>
             <div class="quote">
-              A short film about the pressure to stay visible inside a system that never intended to let you own anything.
+              A short film about the pressure to stay visible inside a system built to own the story.
             </div>
           </article>
         </div>
